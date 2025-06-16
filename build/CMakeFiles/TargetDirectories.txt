@@ -1,0 +1,3 @@
+/home/ed/dev/3d-test/build/CMakeFiles/3dEngine.dir
+/home/ed/dev/3d-test/build/CMakeFiles/edit_cache.dir
+/home/ed/dev/3d-test/build/CMakeFiles/rebuild_cache.dir
