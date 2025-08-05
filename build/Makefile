@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ed/dev/3d-test
+CMAKE_SOURCE_DIR = /home/ed/dev/RendED
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ed/dev/3d-test/build
+CMAKE_BINARY_DIR = /home/ed/dev/RendED/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ed/dev/3d-test/build/CMakeFiles /home/ed/dev/3d-test/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ed/dev/RendED/build/CMakeFiles /home/ed/dev/RendED/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ed/dev/3d-test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ed/dev/RendED/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,113 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 3dEngine
+# Target rules for targets named rended
 
 # Build rule for target.
-3dEngine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3dEngine
-.PHONY : 3dEngine
+rended: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rended
+.PHONY : rended
 
 # fast build rule for target.
-3dEngine/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dEngine.dir/build.make CMakeFiles/3dEngine.dir/build
-.PHONY : 3dEngine/fast
+rended/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/build
+.PHONY : rended/fast
 
-tests/test1.o: tests/test1.cpp.o
-.PHONY : tests/test1.o
+src/loaders/obj_loader.o: src/loaders/obj_loader.cpp.o
+.PHONY : src/loaders/obj_loader.o
 
 # target to build an object file
-tests/test1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dEngine.dir/build.make CMakeFiles/3dEngine.dir/tests/test1.cpp.o
-.PHONY : tests/test1.cpp.o
+src/loaders/obj_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/loaders/obj_loader.cpp.o
+.PHONY : src/loaders/obj_loader.cpp.o
 
-tests/test1.i: tests/test1.cpp.i
-.PHONY : tests/test1.i
+src/loaders/obj_loader.i: src/loaders/obj_loader.cpp.i
+.PHONY : src/loaders/obj_loader.i
 
 # target to preprocess a source file
-tests/test1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dEngine.dir/build.make CMakeFiles/3dEngine.dir/tests/test1.cpp.i
-.PHONY : tests/test1.cpp.i
+src/loaders/obj_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/loaders/obj_loader.cpp.i
+.PHONY : src/loaders/obj_loader.cpp.i
 
-tests/test1.s: tests/test1.cpp.s
-.PHONY : tests/test1.s
+src/loaders/obj_loader.s: src/loaders/obj_loader.cpp.s
+.PHONY : src/loaders/obj_loader.s
 
 # target to generate assembly for a file
-tests/test1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dEngine.dir/build.make CMakeFiles/3dEngine.dir/tests/test1.cpp.s
-.PHONY : tests/test1.cpp.s
+src/loaders/obj_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/loaders/obj_loader.cpp.s
+.PHONY : src/loaders/obj_loader.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/object/object.o: src/object/object.cpp.o
+.PHONY : src/object/object.o
+
+# target to build an object file
+src/object/object.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/object/object.cpp.o
+.PHONY : src/object/object.cpp.o
+
+src/object/object.i: src/object/object.cpp.i
+.PHONY : src/object/object.i
+
+# target to preprocess a source file
+src/object/object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/object/object.cpp.i
+.PHONY : src/object/object.cpp.i
+
+src/object/object.s: src/object/object.cpp.s
+.PHONY : src/object/object.s
+
+# target to generate assembly for a file
+src/object/object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/object/object.cpp.s
+.PHONY : src/object/object.cpp.s
+
+src/render/object_projection.o: src/render/object_projection.cpp.o
+.PHONY : src/render/object_projection.o
+
+# target to build an object file
+src/render/object_projection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/render/object_projection.cpp.o
+.PHONY : src/render/object_projection.cpp.o
+
+src/render/object_projection.i: src/render/object_projection.cpp.i
+.PHONY : src/render/object_projection.i
+
+# target to preprocess a source file
+src/render/object_projection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/render/object_projection.cpp.i
+.PHONY : src/render/object_projection.cpp.i
+
+src/render/object_projection.s: src/render/object_projection.cpp.s
+.PHONY : src/render/object_projection.s
+
+# target to generate assembly for a file
+src/render/object_projection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rended.dir/build.make CMakeFiles/rended.dir/src/render/object_projection.cpp.s
+.PHONY : src/render/object_projection.cpp.s
 
 # Help Target
 help:
@@ -161,10 +233,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... 3dEngine"
-	@echo "... tests/test1.o"
-	@echo "... tests/test1.i"
-	@echo "... tests/test1.s"
+	@echo "... rended"
+	@echo "... src/loaders/obj_loader.o"
+	@echo "... src/loaders/obj_loader.i"
+	@echo "... src/loaders/obj_loader.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/object/object.o"
+	@echo "... src/object/object.i"
+	@echo "... src/object/object.s"
+	@echo "... src/render/object_projection.o"
+	@echo "... src/render/object_projection.i"
+	@echo "... src/render/object_projection.s"
 .PHONY : help
 
 
