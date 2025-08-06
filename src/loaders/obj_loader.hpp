@@ -4,4 +4,4 @@
 
 std::vector<std::string> split(std::string str, char deliminer);
 
-Object loadObject(std::string file_name);
+Object* loadObject(std::string file_name);

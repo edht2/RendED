@@ -11,6 +11,7 @@ public:
     Matrix4x4 model_matrix;
 
     Vector3 position;
+    Vector3 rotation;
     float scale;
 
     Object() : mesh(), position(), scale(0.0f) {}

@@ -129,6 +129,8 @@ public:
         return tmp;
     }
 
+    
+
     void print() {
         for (size_t i = 0; i < 4; ++i) {
             for (size_t j = 0; j < 4; ++j) {

@@ -1,21 +1,39 @@
 #include "render/object_projection.hpp"
 #include "core/vector4.hpp"
-#include <iostream>
+#include <vector>
 
-sf::VertexArray objectProjection(Object object, Matrix4x4 projection_matrix) {
+#include <cmath>
+
+sf::Color greyScale(float scalar) {
+    scalar += 1;
+    scalar *= 127;
+    return sf::Color(scalar, scalar, scalar);
+}
+
+sf::VertexArray objectProjection(Object* _object, Matrix4x4 projection_matrix, float ticks) {
     // projects an object and creates primative with projected points
 
+    Object object = *_object;
+
+    Matrix4x4 view_matrix;
+    // identity matrix (view matrix not implemented yet)
+
     sf::VertexArray vertex_arr(sf::Triangles, object.mesh.size() * 3);
+    // SFML vertex array used to store and then plot the primitives 
+
+    Matrix4x4 final_matrix = projection_matrix * view_matrix * object.model_matrix;
+    // final matrix it a combination of the projection, view and model matricies
 
     for (size_t i = 0; i < object.mesh.size(); ++i) {
-        vertex_arr[0+i*3].position = ((projection_matrix * Matrix4x4() * object.model_matrix) * Vector4(object.mesh[i].points[0])).toScreenSpace();
-        vertex_arr[1+i*3].position = ((projection_matrix * Matrix4x4() * object.model_matrix) * Vector4(object.mesh[i].points[1])).toScreenSpace();
-        vertex_arr[2+i*3].position = ((projection_matrix * Matrix4x4() * object.model_matrix) * Vector4(object.mesh[i].points[2])).toScreenSpace();
-        // add view matrix here later!!!
-        
-        vertex_arr[0+i*3].color = sf::Color::Red;
-        vertex_arr[1+i*3].color = sf::Color::Green;
-        vertex_arr[2+i*3].color = sf::Color::Blue;
+
+        for (size_t j = 0; j < 3; ++j) {
+
+            vertex_arr[j + i * 3].position = (final_matrix * Vector4(object.mesh[i].points[j])).toScreenSpace();
+            vertex_arr[j + i * 3].color = greyScale(object.mesh[i].normal.dot(Vector3(sin(ticks), cos(ticks), 0)));
+
+        }
+
     }
+
     return vertex_arr;
 }

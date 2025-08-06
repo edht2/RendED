@@ -17,8 +17,12 @@ std::vector<std::string> split(std::string str, char deliminer) {
 
 }
 
-Object loadObject(std::string file_name) {
+Object* loadObject(std::string file_name) {
     std::ifstream obj_file(file_name);
+
+    if (!obj_file.is_open()) {
+        std::cerr << "Error: Could not open file '" << file_name << "'.\n";
+    }
 
     std::vector<Vector3> verticies;
     std::vector<Triangle> triangles;
@@ -31,7 +35,7 @@ Object loadObject(std::string file_name) {
 
             if (line_sp[0] == "v") {
                 // loading vertex
-                verticies.push_back(Vector3(std::stof(line_sp[1]), std::stof(line_sp[2]), std::stof(line_sp[3])));
+                verticies.push_back(Vector3(std::stof(line_sp[1]), -std::stof(line_sp[2]), std::stof(line_sp[3])));
             } // also include vt, vn and mtl
             else if (line_sp[0] == "f") {
                 triangles.push_back(
@@ -46,10 +50,14 @@ Object loadObject(std::string file_name) {
 
         obj_file.close();
         // close file
-        return Object(triangles);
+
+        Object* pObject = new Object(triangles);
+
+        return pObject;
     }
     else {
         std::cerr << "Error opening file!" << std::endl;
     }
-    return Object();
+    Object* pObject = new Object();
+    return pObject;
 }

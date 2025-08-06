@@ -8,36 +8,51 @@
 #define SCRW 1600
 #define SCRH 900
 
-using namespace sf;
+//using namespace sf;
 
 int main() {
 
-    auto cube = loadObject("cube.obj");
-    // NOTE: meshes are stored in assets/models HOWEVER CMake copies them into build
-    cube.scale = 0.05f;
-    cube.position.z = -0.f;
-    cube.constructModelMatrix();
+    sf::Clock clock;
 
-    cube.model_matrix * Vector4(1.0, 1.0, 1.0, 0);
+    float ticks = 0;
+
+    auto cube = *loadObject("monkey.obj");
+    
+    cube.scale = 0.05f;
+    cube.constructModelMatrix();
 
     auto perspective_matrix = Matrix4x4().perspective(0.1f, 10.f, 80, 16/9);
     
+    sf::RenderWindow window(sf::VideoMode(SCRW, SCRH), "RendED - SFML");
 
-    RenderWindow screen(VideoMode(SCRW, SCRH), "RendED - V.0.0.1");
+    while (window.isOpen()) {
+        std::cout << 1 / (clock.restart().asSeconds()) << " FPS" << std::endl;
 
-    while (true) {
-        Event event;
-        while (screen.pollEvent(event)) {
-            if (event.type == Event::Closed)
+        ticks += 0.0005f;
+
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
                 // Close app
-                screen.close();
+                window.close();
+            }
+            else if (event.type == sf::Event::KeyPressed) {
+                if (event.key.code == sf::Keyboard::W) {cube.position.z += 0.05f;}
+                if (event.key.code == sf::Keyboard::A) {cube.position.x += 0.05f;}
+                if (event.key.code == sf::Keyboard::S) {cube.position.z -= 0.05f;}
+                if (event.key.code == sf::Keyboard::D) {cube.position.x -= 0.05f;}
+                if (event.key.code == sf::Keyboard::Q) {cube.position.y -= 0.05f;}
+                if (event.key.code == sf::Keyboard::E) {cube.position.y += 0.05f;}
+                cube.constructModelMatrix();
+                // after any changes to the models transform, you must reconstruct the model matrix
+            }
         }
-        screen.clear(sf::Color::Black);
 
-        //cube.position.z += 0.00005f;
-        //cube.constructModelMatrix();
+        window.clear();
 
-        screen.draw(objectProjection(cube, perspective_matrix));
-        screen.display();
+        window.draw(objectProjection(&cube, perspective_matrix, ticks));
+
+        window.display();
+        
     }
 }

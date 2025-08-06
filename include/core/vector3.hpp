@@ -41,7 +41,7 @@ public:
         return Vector3(x / other.x, y / other.y, z / other.z);
     }
 
-    float dot(const Vector3 &other) {
+    float dot(const Vector3 &other) const {
         return (x * other.x) + (y * other.y) + (z * other.z);
     }
 

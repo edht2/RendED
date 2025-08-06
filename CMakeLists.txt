@@ -6,7 +6,6 @@ project(RendED CXX)
 # but we won't rely on SFML_LIBRARIES for the linker.
 find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 
-
 # --- Define Source Files ---
 set(SOURCE_FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
