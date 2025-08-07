@@ -329,11 +329,12 @@ CMakeFiles/rended.dir/src/loaders/obj_loader.cpp.o
  /usr/include/SFML/Graphics/Sprite.hpp
  /usr/include/SFML/Graphics/Text.hpp
  /usr/include/SFML/Graphics/VertexBuffer.hpp
- /home/ed/dev/RendED/include/core/matrix4x4.hpp
+ /home/ed/dev/RendED/include/core/quaternion.hpp
  /usr/include/c++/11/iostream
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
  /home/ed/dev/RendED/include/core/vector4.hpp
+ /home/ed/dev/RendED/include/core/matrix4x4.hpp
  /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h
  /usr/include/c++/11/cassert
  /usr/include/assert.h
@@ -832,6 +833,7 @@ CMakeFiles/rended.dir/src/main.cpp.o
  /usr/include/c++/11/iostream
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
+ /home/ed/dev/RendED/include/core/quaternion.hpp
  /home/ed/dev/RendED/src/loaders/obj_loader.hpp
  /home/ed/dev/RendED/include/object/object.hpp
  /home/ed/dev/RendED/include/core/triangle.hpp
@@ -1164,11 +1166,12 @@ CMakeFiles/rended.dir/src/object/object.cpp.o
  /usr/include/SFML/Graphics/Sprite.hpp
  /usr/include/SFML/Graphics/Text.hpp
  /usr/include/SFML/Graphics/VertexBuffer.hpp
- /home/ed/dev/RendED/include/core/matrix4x4.hpp
+ /home/ed/dev/RendED/include/core/quaternion.hpp
  /usr/include/c++/11/iostream
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
  /home/ed/dev/RendED/include/core/vector4.hpp
+ /home/ed/dev/RendED/include/core/matrix4x4.hpp
 
 CMakeFiles/rended.dir/src/render/object_projection.cpp.o
  /home/ed/dev/RendED/src/render/object_projection.cpp
@@ -1498,9 +1501,10 @@ CMakeFiles/rended.dir/src/render/object_projection.cpp.o
  /usr/include/c++/11/tr1/poly_laguerre.tcc
  /usr/include/c++/11/tr1/riemann_zeta.tcc
  /home/ed/dev/RendED/include/core/vector2.hpp
- /home/ed/dev/RendED/include/core/matrix4x4.hpp
+ /home/ed/dev/RendED/include/core/quaternion.hpp
  /usr/include/c++/11/iostream
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
  /home/ed/dev/RendED/include/core/vector4.hpp
+ /home/ed/dev/RendED/include/core/matrix4x4.hpp
 

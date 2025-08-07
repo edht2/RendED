@@ -268,10 +268,11 @@ CMakeFiles/rended.dir/src/loaders/obj_loader.cpp.o: \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/ed/dev/RendED/include/core/matrix4x4.hpp \
+ /home/ed/dev/RendED/include/core/quaternion.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
  /home/ed/dev/RendED/include/core/vector4.hpp \
+ /home/ed/dev/RendED/include/core/matrix4x4.hpp \
  /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
  /usr/include/c++/11/cassert /usr/include/assert.h \
  /usr/include/c++/11/cfloat \

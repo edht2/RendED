@@ -328,11 +328,12 @@ CMakeFiles/rended.dir/src/loaders/obj_loader.cpp.o: ../src/loaders/obj_loader.cp
   /usr/include/SFML/Graphics/Sprite.hpp \
   /usr/include/SFML/Graphics/Text.hpp \
   /usr/include/SFML/Graphics/VertexBuffer.hpp \
-  ../include/core/matrix4x4.hpp \
+  ../include/core/quaternion.hpp \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
   ../include/core/vector4.hpp \
+  ../include/core/matrix4x4.hpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
@@ -830,6 +831,7 @@ CMakeFiles/rended.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  ../include/core/quaternion.hpp \
   ../src/loaders/obj_loader.hpp \
   ../include/object/object.hpp \
   ../include/core/triangle.hpp \
@@ -1161,11 +1163,12 @@ CMakeFiles/rended.dir/src/object/object.cpp.o: ../src/object/object.cpp \
   /usr/include/SFML/Graphics/Sprite.hpp \
   /usr/include/SFML/Graphics/Text.hpp \
   /usr/include/SFML/Graphics/VertexBuffer.hpp \
-  ../include/core/matrix4x4.hpp \
+  ../include/core/quaternion.hpp \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../include/core/vector4.hpp
+  ../include/core/vector4.hpp \
+  ../include/core/matrix4x4.hpp
 
 CMakeFiles/rended.dir/src/render/object_projection.cpp.o: ../src/render/object_projection.cpp \
   /usr/include/stdc-predef.h \
@@ -1494,11 +1497,12 @@ CMakeFiles/rended.dir/src/render/object_projection.cpp.o: ../src/render/object_p
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   ../include/core/vector2.hpp \
-  ../include/core/matrix4x4.hpp \
+  ../include/core/quaternion.hpp \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../include/core/vector4.hpp
+  ../include/core/vector4.hpp \
+  ../include/core/matrix4x4.hpp
 
 
 ../src/render/object_projection.cpp:
@@ -1679,6 +1683,8 @@ CMakeFiles/rended.dir/src/render/object_projection.cpp.o: ../src/render/object_p
 
 /usr/include/c++/11/cassert:
 
+../include/core/matrix4x4.hpp:
+
 ../include/core/vector4.hpp:
 
 /usr/include/c++/11/bits/regex_scanner.h:
@@ -1686,8 +1692,6 @@ CMakeFiles/rended.dir/src/render/object_projection.cpp.o: ../src/render/object_p
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/istream:
-
-../include/core/matrix4x4.hpp:
 
 /usr/include/SFML/Graphics/Text.hpp:
 
@@ -1874,6 +1878,8 @@ CMakeFiles/rended.dir/src/render/object_projection.cpp.o: ../src/render/object_p
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/SFML/Graphics.hpp:
+
+../include/core/quaternion.hpp:
 
 /usr/include/c++/11/ext/new_allocator.h:
 

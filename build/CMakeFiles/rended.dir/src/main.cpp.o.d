@@ -267,6 +267,7 @@ CMakeFiles/rended.dir/src/main.cpp.o: /home/ed/dev/RendED/src/main.cpp \
  /home/ed/dev/RendED/include/core/matrix4x4.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
+ /home/ed/dev/RendED/include/core/quaternion.hpp \
  /home/ed/dev/RendED/src/loaders/obj_loader.hpp \
  /home/ed/dev/RendED/include/object/object.hpp \
  /home/ed/dev/RendED/include/core/triangle.hpp \

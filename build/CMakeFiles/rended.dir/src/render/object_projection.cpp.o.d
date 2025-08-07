@@ -267,7 +267,8 @@ CMakeFiles/rended.dir/src/render/object_projection.cpp.o: \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
  /home/ed/dev/RendED/include/core/vector2.hpp \
- /home/ed/dev/RendED/include/core/matrix4x4.hpp \
+ /home/ed/dev/RendED/include/core/quaternion.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/ed/dev/RendED/include/core/vector4.hpp
+ /home/ed/dev/RendED/include/core/vector4.hpp \
+ /home/ed/dev/RendED/include/core/matrix4x4.hpp
